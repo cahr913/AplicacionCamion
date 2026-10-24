@@ -13,6 +13,6 @@ import umg.UI.*;
 public class Proyectomavenumg {
 
     public static void main(String[] args) {
-        java.awt.EventQueue.invokeLater(() -> new umg.UI.frmMenuPrincipal().setVisible(true));
+        java.awt.EventQueue.invokeLater(() -> new frmMenuPrinciapl().setVisible(true));;
     }
 }

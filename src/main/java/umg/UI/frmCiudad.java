@@ -199,6 +199,13 @@ public class frmCiudad extends javax.swing.JFrame {
     private void btnGuardarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGuardarActionPerformed
         // TODO add your handling code here:
         
+        // Validar que el nombre no esté vacío
+        if (txtNombre.getText().trim().isEmpty()){
+            JOptionPane.showMessageDialog(this, "El nombre de la ciudad es obligatorio");
+            txtNombre.requestFocus();
+            return;
+        }
+        
         // crear objeto de la clase ciudad
         Ciudad ciudad = new Ciudad();
         ciudad.setNombre(txtNombre.getText());
@@ -209,10 +216,18 @@ public class frmCiudad extends javax.swing.JFrame {
             dao.insertar(ciudad);
             JOptionPane.showMessageDialog(this, "Datos almacenados correctamente");
             cargarCiudadDAO();
+            limpiarCampos();
         } catch (SQLException error){
-            
+            JOptionPane.showMessageDialog(this, "Error al guardar: " + error.getMessage());
         }
     }//GEN-LAST:event_btnGuardarActionPerformed
+
+    private void limpiarCampos(){
+        txtID.setText("");
+        txtNombre.setText("");
+        idCiudad = 0;
+        txtNombre.requestFocus();
+    }
 
     private void btnActualizarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnActualizarActionPerformed
         idCiudad = Integer.parseInt(txtID.getText());
