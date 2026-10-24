@@ -34,7 +34,6 @@ public class frmMenuPrinciapl extends javax.swing.JFrame {
         btnCamionero = new javax.swing.JButton();
         btnPaquete = new javax.swing.JButton();
         btnCamion = new javax.swing.JButton();
-        btnConductorCamion = new javax.swing.JButton();
         btnSalir = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -57,9 +56,6 @@ public class frmMenuPrinciapl extends javax.swing.JFrame {
         btnCamion.setText("Camion");
         btnCamion.addActionListener(this::btnCamionActionPerformed);
 
-        btnConductorCamion.setText("Conductor Camion");
-        btnConductorCamion.addActionListener(this::btnConductorCamionActionPerformed);
-
         btnSalir.setText("Salir");
         btnSalir.addActionListener(this::btnSalirActionPerformed);
 
@@ -75,13 +71,11 @@ public class frmMenuPrinciapl extends javax.swing.JFrame {
                         .addComponent(btnSalir, javax.swing.GroupLayout.PREFERRED_SIZE, 167, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addContainerGap())
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(btnConductorCamion, javax.swing.GroupLayout.PREFERRED_SIZE, 167, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                .addComponent(btnCiudad, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(btnCamionero, javax.swing.GroupLayout.DEFAULT_SIZE, 167, Short.MAX_VALUE)
-                                .addComponent(btnCamion, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(btnPaquete, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addComponent(btnCiudad, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(btnCamionero, javax.swing.GroupLayout.DEFAULT_SIZE, 167, Short.MAX_VALUE)
+                            .addComponent(btnCamion, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(btnPaquete, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                         .addGap(167, 167, 167))))
         );
         jPanel1Layout.setVerticalGroup(
@@ -96,9 +90,7 @@ public class frmMenuPrinciapl extends javax.swing.JFrame {
                 .addComponent(btnCamion, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(btnPaquete, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(btnConductorCamion, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(56, 56, 56)
                 .addComponent(btnSalir, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(34, Short.MAX_VALUE))
         );
@@ -126,7 +118,7 @@ public class frmMenuPrinciapl extends javax.swing.JFrame {
 
     private void btnCamioneroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCamioneroActionPerformed
         // TODO add your handling code here:
-        new frmCamionero().setVisible(true);
+        new frmMenuCamionero().setVisible(true);
     }//GEN-LAST:event_btnCamioneroActionPerformed
 
     private void btnCamionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCamionActionPerformed
@@ -136,13 +128,8 @@ public class frmMenuPrinciapl extends javax.swing.JFrame {
 
     private void btnPaqueteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPaqueteActionPerformed
         // TODO add your handling code here:
-        new frmPaquete().setVisible(true);
+        new frmMenuPaquete().setVisible(true);
     }//GEN-LAST:event_btnPaqueteActionPerformed
-
-    private void btnConductorCamionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnConductorCamionActionPerformed
-        // TODO add your handling code here:
-        new frmPaquete().setVisible(true);
-    }//GEN-LAST:event_btnConductorCamionActionPerformed
 
     private void btnSalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSalirActionPerformed
         // TODO add your handling code here:
@@ -178,7 +165,6 @@ public class frmMenuPrinciapl extends javax.swing.JFrame {
     private javax.swing.JButton btnCamion;
     private javax.swing.JButton btnCamionero;
     private javax.swing.JButton btnCiudad;
-    private javax.swing.JButton btnConductorCamion;
     private javax.swing.JButton btnPaquete;
     private javax.swing.JButton btnSalir;
     private javax.swing.JPanel jPanel1;
